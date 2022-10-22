@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cars",
+  "info": {
+    "singularName": "car",
+    "pluralName": "cars",
+    "displayName": "Car"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "GosNomer": {
+      "type": "string"
+    },
+    "V": {
+      "type": "decimal"
+    },
+    "Model": {
+      "type": "string"
+    },
+    "trips": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::trip.trip",
+      "mappedBy": "car"
+    }
+  }
+}

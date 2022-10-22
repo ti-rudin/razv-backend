@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pikets",
+  "info": {
+    "singularName": "piket",
+    "pluralName": "pikets",
+    "displayName": "Piket",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Length": {
+      "type": "integer"
+    },
+    "Price": {
+      "type": "integer"
+    },
+    "trips": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::trip.trip",
+      "mappedBy": "piket"
+    }
+  }
+}
